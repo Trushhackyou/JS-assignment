@@ -1,0 +1,41 @@
+2. Methods of String and Array are:
+   String methods:
+     Search()- This method searches a string for a specified value and return the position of the match.
+     Example:var str = "Please locate where 'locate' occurs!";
+             var pos = str.search("locate");
+     
+     Substring()- This methods can accept negative indices unlike slicing.
+     Example: var str = "Apple, Banana, Kiwi";
+              var res = str.substring(7, 13);
+
+     Replace()-The replace() method replaces a specified value with another value in a string:
+     Example: str = "Please visit Microsoft!";
+              var n = str.replace("Microsoft", "Google");
+     
+     trim()-The trim() method removes whitespace from both sides of a string.
+     Example: var str = "       Hello World!        ";
+              alert(str.trim());
+
+     charAt()-The charAt() method returns the character at a specified index (position) in a string:
+     Example: var str = "HELLO WORLD";
+              str.charAt(0);            // returns H
+
+   Array methods:
+     join()- The join() method also joins all array elements into a string.
+             It behaves just like toString(), but in addition you can specify the separator.
+     Example: var fruits = ["Banana", "Orange", "Apple", "Mango"];
+              document.getElementById("demo").innerHTML = fruits.join(" * ");
+
+     Shift()- Shifting is equivalent to popping, working on the first element instead of the last.
+              The shift() method removes the first array element and "shifts" all other elements to a lower index.
+     Example: var fruits = ["Banana", "Orange", "Apple", "Mango"];
+              fruits.shift();            // Removes the first element "Banana" from fruits
+
+     unshift()- The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+     Example: var fruits = ["Banana", "Orange", "Apple", "Mango"];
+              fruits.unshift("Lemon");    // Adds a new element "Lemon" to fruits
+
+     splice()- you can use splice() to remove elements without leaving "holes" in the array:
+     Example: var fruits = ["Banana", "Orange", "Apple", "Mango"];
+              fruits.splice(0, 1);        // Removes the first element of fruits
+
