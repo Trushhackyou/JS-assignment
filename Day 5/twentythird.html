@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title> Question 2
+
+        </title>
+    </head>
+    <body>
+        <script>
+            class User{
+                constructor(name,age,email) {
+                    this.name = name;
+                    this.age = age;
+                    this.email = email;
+                }
+                login(){
+                   console.log(`${this.name} has logged in`);
+                   return this;
+                       }
+                logout(){
+                  console.log(`${this.name} has logged out`);
+                  return this;
+                       }
+
+                getDetails(){
+                  console.log(`Name is ${this.name}, email is ${this.email}, age is ${this.age}`);
+                  return this;
+                            }
+
+}
+
+class Moderator extends User{
+    constructor(name,age,email,role){
+        super(name,age,email);
+        this.role = role;
+    }
+    addCoins(){
+        this.luCoins++;
+        console.log(`${this.name} has ${this.luCoins} coins`);
+        return this;
+    }
+
+    removeCoins(){
+        this.lucoins--;
+        console.log(`${this.name} has ${this.luCoins} coins`);
+        return this;
+            
+          }
+
+}
+
+class Admin extends Moderator{
+   addCourse(user,course){
+       user.courses.push(course);
+       console.log(user);
+   }
+   removeCourse(user,course){
+       user.courses.pop(course);
+       console.log(user);
+   }
+}
+
+
+let user1 = new User('John',25,'john@gmail.com', 'User1');
+let user2 = new User('Michael',24,'michael@gmai.com', 'User2');
+let user3 = new User('Johnny',35,'johnyl@gmai.com', 'User3');
+let mod = new Moderator('George',21,'george@gmail.com','Moderator');
+let admin = new Admin('Rio',19,'rio@gmail.com');
+let users = [user1,user2,user3,mod,admin];
+
+users.forEach(element => {
+    console.log(element);
+});
+user1.getDetails();
+user1.login();
+                   
+        </script>
+    </body>
+</html>
