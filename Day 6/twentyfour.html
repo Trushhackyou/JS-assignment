@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width", initial-scale=1.0">
+    <title>1 Question</title>
+</head>
+<body>
+    <center><h1> This is my day 6 Assignment</h1></center>
+    <script>
+        var c = ["blue", "black", "yellow", "red"];
+        var currentColorIndex = 0;
+
+        function changeColor() {
+            document.bgColor = c[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % c.length;
+            setTimeout(changeColor, 5000);
+                               }
+        changeColor();
+        
+
+    </script>
+    
+</body>
+</html>
