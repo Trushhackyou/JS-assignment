@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random quote Generator</title>
+
+    <style>
+        body{background-color: rgb(59, 130, 0);  margin:auto;}
+        h2{background-color: #26a399; color:#ffffff;
+        padding:10px;
+        font-family: arial;
+        text-align: center;}
+
+.btn{height:50px; width:150px;
+font-size: 18px;
+color:#ffffff;
+background-color: dodgerblue;
+border:none;
+padding:5px;
+border-radius: 5px;}
+
+.card{padding:15px 30px 15px 30px;
+margin:40px auto;
+max-width:500px;
+max-height:300px;
+text-align: center;
+background-color: #ffffff;
+border-radius: 5px;
+} 
+
+p{font-family:'Segoe UI';
+font-weight:400;
+font-size: 20px;}
+
+img{height:25px;
+width:25px;
+}
+h2{background-color: #1c1c1c; color:#ffffff;
+padding:10px;
+font-family: arial;
+text-align: center;}
+
+.btn{height:50px; width:150px;
+font-size: 18px;
+color:#ffffff;
+background-color: dodgerblue;
+border:none;
+padding:5px;
+border-radius: 5px;}
+
+.card{padding:15px 30px 15px 30px;
+margin:40px auto;
+max-width:500px;
+max-height:300px;
+text-align: center;
+background-color: #b4c00b;
+border-radius: 5px;
+} 
+
+p{font-family:'Segoe UI';
+font-weight:400;
+font-size: 20px;}
+
+img{height:25px;
+width:25px;
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="card">
+          <h2>Random quote</h2>
+          <p>wanna see a random quote ?</p>
+          <button class="btn">Generate</button>
+        </div>
+        <div id="quote">
+         </div>
+    </div>
+
+    <script>
+        let quotes=[
+'The secret to life is to love who you are.',
+'Look for opportunities in every change in your life.',
+'Persist while others are quitting.',
+'An apple a day keeps doctor away',
+'Once you choose hope, anything’s possible.',
+'It is not how much we have, but how much we enjoy, that makes happiness.',
+'I aspire to be a woman that inspires by being.'
+
+];
+let index=Math.floor(Math.random()*quotes.length);
+let div=document.querySelector('#quote');
+div.innerHTML=quote;
+
+function displayQuote(){
+
+let index=Math.floor(Math.random()*quotes.length);
+
+let div=document.querySelector('#quote');
+
+let quote=`<div class="card">
+<p>${quotes[index]}</p>
+</div>
+`;
+div.innerHTML=quote;
+}
+
+let btn=document.querySelector('.btn');
+btn.addEventListener('click', displayQuote);
+
+    </script>
+</body>
+</html>
